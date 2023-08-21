@@ -4,7 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 const mongoDB =
-  "mongodb+srv://myAtlasDBUser:vpYSahjvNP62ISZm@cluster0.59yxgol.mongodb.net/local_library?retryWrites=true&w=majority";
+  "mongodb+srv://myAtlasDBUser:pXAldOAuDuoco4gB@cluster0.59yxgol.mongodb.net/local_library?retryWrites=true&w=majority";
 
 main().catch((err) => console.log(err));
 async function main() {
