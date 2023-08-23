@@ -13,11 +13,11 @@ exports.index = asyncHandler(async (req, res, next) => {
     numAuthors,
     numGenres,
   ] = await Promise.all([
-    Book.countDocuments({}).exec,
-    BookInstance.countDocuments({}).exec,
-    BookInstance.countDocuments({ state: "Available" }).exec,
-    Author.countDocuments({}).exec,
-    Genre.countDocuments({}).exec,
+    Book.countDocuments({}).exec(),
+    BookInstance.countDocuments({}).exec(),
+    BookInstance.countDocuments({ state: "Available" }).exec(),
+    Author.countDocuments({}).exec(),
+    Genre.countDocuments({}).exec(),
   ]);
 
   res.render("index", {
