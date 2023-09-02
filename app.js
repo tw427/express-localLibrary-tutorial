@@ -3,8 +3,7 @@ const express = require("express");
 
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
-const mongoDB =
-  "mongodb+srv://myAtlasDBUser:pXAldOAuDuoco4gB@cluster0.59yxgol.mongodb.net/local_library?retryWrites=true&w=majority";
+const mongoDB = process.env.SECRET_MONGOURI;
 
 main().catch((err) => console.log(err));
 async function main() {
